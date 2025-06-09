@@ -1,90 +1,152 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Dashboard</title>
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"/>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" />
   <link rel="icon" type="image/png" href="images/favicon.png" />
   <link rel="stylesheet" href="../css/dashboard.css">
+  <link rel="stylesheet" href="../css/components/footer.css">
 </head>
+
 <body>
 
-  <!-- Hamburger Menu -->
-  <div class="hamburger" id="hamburger">
-    <i class="fa-solid fa-bars"></i>
-  </div>
 
-  <!-- Sidebar -->
-  <aside id="sidebar">
-    <div class="profile">
-      <img src="../images/profile.webp" alt="Profile Picture" width="100px" style="border-radius: 100%;" />
-      <h1 style="color: white; text-align: center;">Name</h1>
-    </div>
-    <nav>
-      <ul>
-        <li><a href="index.html" aria-label="Home"><i class="fa-solid fa-house"></i> Home</a></li>
-        <li><a href="getStarted.html"><i class="fa-solid fa-plus"></i> Add Child</a></li>
-        <li><i class="fa-solid fa-user"></i> My Children</li>
-        <li><i class="fa-solid fa-bell"></i> Notification</li>
-        <li><i class="fa-solid fa-right-from-bracket"></i> Logout</li>
-      </ul>
+  <header class="main-header">
+    <div class="logo">Cuddle Care</div>
+    <nav class="main-nav">
+      <a href="../index.html">Home</a>
+      <a href="../pages/dashboard.html">Dashboard</a>
+      <a href="../pages/about.html">About</a>
+      <a href="../pages/contact.html">Contact</a>
+      <a href="../pages/signup.html">Sign Up</a>
     </nav>
-    <div class="contact-icons">
-      <a href="https://facebook.com" target="_blank"><i class="fab fa-facebook-f"></i></a>
-      <a href="https://instagram.com" target="_blank"><i class="fab fa-instagram"></i></a>
-      <a href="https://twitter.com" target="_blank"><i class="fab fa-twitter"></i></a>
+    <div class="hamburger" id="hamburger">
+      <i class="fa-solid fa-bars"></i>
     </div>
-  </aside>
-
-  <!-- Main Content -->
-  <main class="dashboard">
-    <section class="welcome">
-      <a href="getStarted.html">
-        <button class="add-child"><i class="fa-solid fa-plus"></i> Add Child</button>
-      </a>
-      <h1>Welcome back!</h1>
-      <p>Here's what's happening today.</p>
-    </section>
-
-    <section class="cards">
-      <div class="card">👶 Children Registered <strong>5</strong></div>
-      <div class="card">📅 Appointments <strong>2</strong></div>
-      <div class="card">📨 Messages <strong>3</strong></div>
-    </section>
-
-    <section class="child-overview">
-      <h2>👧 My Children</h2>
-      <div class="child-card">
-        <h3>Sara Fatih</h3>
-        <p>Age: 4</p>
-        <p>Center: Little Angels</p>
-        <p>Status: Healthy</p>
+  </header>
+  <main class="main">
+    <aside class="sidebar " id="sidebar">
+      <div class="profile">
+        <img src="../images/profile.webp" alt="Profile Picture" />
+        <h2>Hubi Abdela</h2>
       </div>
-    </section>
+      <nav>
+        <a href="../index.html"><i class="fa-solid fa-children"></i> All Child</a>
+        <a href="./getStarted.html"><i class="fa-solid fa-bell"></i> Notification</a>
+        <a href="./signup.html"><i class="fa-solid fa-user"></i> Profile</a>
+        <a href="./about.html"><i class="fa-solid fa-money-check-dollar"></i> Pay Tuition</a>
+        <a href="./contact.html"><i class="fa-solid fa-comments"></i> Message Staff</a>
+      </nav>
 
-    <section class="recent-activity">
-      <h2>📝 Recent Activity</h2>
-      <ul>
-        <li>Booked: Little Angels Daycare – May 10</li>
-        <li>Updated: Sara’s vaccination record</li>
-        <li>Received: Message from Bright Minds Center</li>
-      </ul>
-    </section>
+    </aside>
+    <div class="content">
+      <section class="welcome-hero">
+        <div class="welcome">
+          <div class="welcome-header">
+            <div>
+              <p>Thus,july 15</p>
+              <h1>Hubi Abdela</h1>
+              <p>3 months 2 day</p>
+            </div>
 
-    <section class="notifications">
-      <h2>🔔 Notifications</h2>
-      <p>No new alerts.</p>
-    </section>
+            <button>Add child</button>
+          </div>
+
+          <img src="../images/child_image-removebg-preview.png" alt="Happy child" />
+        </div>
+      </section>
+
+
+      <section class="child-activity">
+        <h1 class="report-title">Student Daily Activity Report</h1>
+
+        <div class="activity-row">
+          <div class="activity-block">
+            <div class="activity-header col">
+              <i class="fa-solid fa-user-check"></i>
+              <p class="title">Attendance</p>
+            </div>
+            <div class="col"><span>Status:</span> <strong>Present</strong></div>
+            <div class="col"><span>Arrival:</span> <strong>8:30 AM</strong></div>
+            <div class="col"><span>Departure:</span> <strong>3:00 PM</strong></div>
+          </div>
+
+          <div class="activity-block">
+            <div class="activity-header col">
+              <i class="fa-solid fa-chalkboard"></i>
+              <p class="title">Classes</p>
+            </div>
+            <div class="col"><span>Attended:</span> <strong>5</strong></div>
+            <div class="col"><span>Missed:</span> <strong>1</strong></div>
+            <div class="col"><span>Time Spent:</span> <strong>4h 20m</strong></div>
+          </div>
+
+          <div class="activity-block">
+            <div class="activity-header col">
+              <i class="fa-solid fa-file-lines"></i>
+              <p class="title">Assignments</p>
+            </div>
+            <div class="col"><span>Submitted:</span> <strong>3</strong></div>
+            <div class="col"><span>Pending:</span> <strong>2</strong></div>
+            <div class="col"><span>Last Submission:</span> <strong>1h ago</strong></div>
+          </div>
+
+          <div class="activity-block">
+            <div class="activity-header col">
+              <i class="fa-solid fa-mug-hot"></i>
+              <p class="title">Breaks</p>
+            </div>
+            <div class="col"><span>Count:</span> <strong>2</strong></div>
+            <div class="col"><span>Duration:</span> <strong>45 mins</strong></div>
+            <div class="col"><span>Last Break:</span> <strong>30 mins ago</strong></div>
+          </div>
+        </div>
+
+
+      </section>
+
+      <section class="notifications">
+        <h1><i class="fa-solid fa-bell"></i> Notifications</h1>
+        <ul class="notification-list">
+          <li> Your child was marked present today at 8:05 AM.</li>
+          <li> New assignment: "Color the Rainbow" is available in the Activities section.</li>
+          <li> Payment for June tuition was received. Thank you!</li>
+          <li> Snack break: Your child enjoyed apple slices and milk at 10:30 AM.</li>
+        </ul>
+      </section>
+      <section class="child-fun-snapshot">
+        <h2>Today's Fun Moment</h2>
+        <img src="../images/childactivity.jpg" alt="Child having fun" class="fun-image">
+        <p>Today, your child enjoyed painting and playing with friends!</p>
+      </section>
+      <div class="contact-wrapper">
+        <h2>Contact The Stuff</h2>
+
+        <div class="contact-form">
+          <form action="send-email.php" method="post">
+            <input type="subject" id="subject" name="subject" placeholder="subject" required><br>
+            <textarea id="message" name="message" cols="30" rows="5" placeholder="Write your message..."
+              required></textarea><br>
+            <div class="button-wrapper">
+              <button type="submit">Send Message</button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
   </main>
-
+  <custom-footer></custom-footer>
   <script>
-    const hamburger = document.getElementById("hamburger");
-    const sidebar = document.getElementById("sidebar");
-
-    hamburger.addEventListener("click", () => {
-      sidebar.classList.toggle("show");
-    });
+    document.getElementById('hamburger').addEventListener('click', () => {
+      const sidebar = document.getElementById('sidebar');
+      sidebar.classList.toggle('active')
+    })
   </script>
+  <script src="../js/layout.js"></script>
+
 </body>
+
 </html>

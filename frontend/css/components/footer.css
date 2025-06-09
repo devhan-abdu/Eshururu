@@ -5,6 +5,7 @@ footer {
 }
 
 .footerSection {
+   z-index: 9999;
    display: flex;
    gap: 24px;
    justify-content: space-evenly;

@@ -1,6 +1,6 @@
 class CustomHeader extends HTMLElement {
   connectedCallback() {
-      fetch('./components/header.html')
+      fetch('/frontend/components/header.html')
           .then(response => response.text())
           .then(data => {
               this.innerHTML = data;
@@ -11,7 +11,7 @@ class CustomHeader extends HTMLElement {
 
 class CustomFooter extends HTMLElement {
   connectedCallback() {
-      fetch('./components/footer.html')
+      fetch('/frontend/components/footer.html')
           .then(response => response.text())
           .then(data => {
               this.innerHTML = data;
