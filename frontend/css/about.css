@@ -1,104 +1,101 @@
-body {
-      font-family:serif;
-      background:url(../images/babysitting.jpeg);
-      background-attachment: fixed;
-      background-size: cover;
-      background-position: center;
-      background-repeat: no-repeat;
-      color: #333;
-      margin: 0;
-      padding: 0;
-
-    }
-    .container {
-      max-width: 900px;
-      margin: auto;
-      padding: 40px 20px;
-      background: #fff;
-      box-shadow: 0 0 10px rgba(0,0,0,0.1);
-      border-radius: 10px;
-      margin-top: 40px;
-    }
-    
-    h1, h2 {
-      color: #e75480;
-      text-align:center;
-      font-family: "Bodoni Moda", serif;
-      font-optical-sizing: auto;
-      font-weight: 600;
-      font-style: normal;
-    }
-    h1{
-      font-size: 2em;
-      color: #c94d73;
-    }
-    h2{
-      max-width:200px;
-      margin:auto;
-      width:50%;
-      border-bottom:5px solid #e75480;
-      border-radius: 50%;
-    }
-    ul {
-      list-style-type: ✅;
-      padding-left: 20px;
-    }
-    section {
-      margin-bottom: 30px;
-    }
-    ul{
-      display: flex;
-      flex-wrap: wrap;
-      gap: 20px;
-    }
-    ul li{
-      margin-right: 10px;
-      list-style: none;
-      background-color: #eec3d0;
-      padding: 30px;
-      max-width: 300px;
-    }
-    footer{
-      background-color: #afaeae;
-      position: static;
-      margin-top: 100px;
-      bottom: 0;
-      width: 100%;
-      text-align: center;
-      padding: 10px;
-      color: #5a5959;
-      font-size: 12px;
-    }
-    a{
-        text-decoration: none;
-    }
-    .btn1{
-      background-color: #e75480;
-      padding: 10px 20px;
-      border: none;
-      border-radius: 5px;
-      a{
-        color: #fff;
+@import url('variables.css');
+       body {
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        margin: 0;
+        padding: 0;
+        animation: fadeIn 1.5s ease-in-out;
+        box-sizing: border-box;
       }
-    }
-    .btn1:hover{
-      background-color: #c94d73;
-    }
-    .btn2{
-      background-color: #fff;
-      padding: 10px 20px;
-      border: #e75480 2px solid;
-      border-radius: 5px;
-      margin-left: 10px;
-      transition: all 0.3s ease;
-      a{
-        color: #333;
+    .about-hero{
+        padding: 50px 0;
+        text-align: center;
+        color: var(--text-dark);
+        background: linear-gradient(to bottom right, #fffafc, #fce4ec);
       }
-    }
-    .btn2:hover{
-      background-color: #e75480;
-      cursor: pointer;
-      a{
-        color: #fff;
+      .about-hero h1{
+        font-size: 30px;
       }
-    }
+      .about-content{
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        margin: auto;
+        width: 85%;
+        margin-top: 50px;
+        border-radius: 10px;
+      }
+      .about-img img{
+        margin-right: 50px;
+        border-radius: 30px;
+      }
+      .about-text{
+        width: 500px;
+      }
+      .about-text h1{
+        font-size: 40px;
+        margin-top: 0;
+      }
+      button{
+        background-color: var(--primary-light);
+        font-weight: 600;
+        padding: 10px 20px;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        transition: all 0.3s ease-in-out;
+        a{
+          text-decoration: none;
+          color: #fff;
+        }
+      }
+      button:hover{
+        background-color: var(--primary-color);
+      }
+.about-experience{
+  background-color: #f7fbe4;
+  padding: 50px;
+  margin: 50px 0;
+}
+.experience-container{
+display: flex;
+justify-content: space-around;
+align-items: center;
+margin: auto;
+width: 85%;
+margin-top: 50px;
+border-radius: 10px;
+}
+.exp-text{
+  width: 500px;
+}
+.exp-text h1{
+  font-size: 40px;
+}
+.exp-blocks{
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 30px;
+}
+.exp-blocks div{
+  width: 150px;
+  padding: 15px;
+  text-align: center;
+  border-radius: 20px;
+  transition: all 0.3s ease-in-out;
+}
+.exp-blocks div:hover{
+  background-color: #fdeeca;
+}
+.exp-blocks div h1{
+  font-size: 35px;
+}
+.about-choose{
+  background:linear-gradient(to bottom,#fff, #f7fbe4,#fff,#f7fbe4,#fff) ;
+  width: 800px;
+  margin: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 90px;
+}
