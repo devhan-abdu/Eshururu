@@ -1,78 +1,67 @@
-@import url(variables.css);
 body {
+  background-color: #f8f8f8; /* Light background for contrast */
   font-family: Arial, sans-serif;
-  background-color: #f0f4f8;
-  margin: 0;
-  padding: 40px 0;
-  display: flex;
-  justify-content: center;
-  align-items: flex-start;
-  min-height: 100vh;
+  color: #333; /* Text color */
 }
 
 form {
-  background-color: #ffffff;
-  padding: 30px;
-  border-radius: 10px;
-  border: 1px solid #ddd;
-  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
-  width: 100%;
-  max-width: 650px;
+  background-color: #ffffff; /* White background for the form */
+  border: 2px solid #ff69b4; /* Pink border */
+  border-radius: 10px; /* Rounded corners */
+  padding: 20px;
+  max-width: 600px; /* Limit form width */
+  margin: 30px auto; /* Center the form */
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Subtle shadow */
 }
 
 fieldset {
-  border: 2px solid #4a90e2;
-  border-radius: 8px;
-  margin-bottom: 25px;
-  padding: 20px;
-  background-color: #f7fbff;
+  border: none; /* Remove default border */
+  margin-bottom: 20px; /* Space between fieldsets */
 }
 
 legend {
-  font-size: 1.2em;
-  font-weight: bold;
-  color: #4a90e2;
-  padding: 0 10px;
+  font-size: 1.5em; /* Larger font size for legends */
+  color: #ff69b4; /* Pink color for legends */
 }
 
 label {
-  display: block;
-  margin-bottom: 6px;
-  font-weight: 500;
-  color: #333;
+  font-weight: bold; /* Bold labels for emphasis */
+  color: #ff69b4; /* Pink color for labels */
 }
 
 input[type="text"],
 input[type="date"],
 input[type="tel"],
-input[type="file"],
 select,
 textarea {
-  width: 100%;
-  padding: 10px;
-  border: 1px solid #ccc;
-  border-radius: 6px;
-  font-size: 1em;
-  margin-bottom: 15px;
-  background-color: #fff;
-  box-sizing: border-box;
+  width: 100%; /* Full width input fields */
+  padding: 10px; /* Padding for comfort */
+  margin-top: 5px; /* Space above inputs */
+  margin-bottom: 15px; /* Space below inputs */
+  border: 1px solid #ccc; /* Light gray border */
+  border-radius: 5px; /* Rounded corners */
 }
 
-textarea {
-  resize: vertical;
+input[type="file"] {
+  margin-top: 5px; /* Space above file input */
+  margin-bottom: 15px; /* Space below file input */
 }
 
 input[type="submit"] {
-  background-color: #4a90e2;
-  color: white;
-  border: none;
-  padding: 12px 20px;
-  font-size: 1em;
-  border-radius: 6px;
-  cursor: pointer;
-  transition: background-color 0.3s ease;
+  background-color: #ff69b4; /* Pink background for button */
+  color: #ffffff; /* White text for button */
+  border: none; /* No border */
+  padding: 10px 20px; /* Padding for button */
+  border-radius: 5px; /* Rounded corners */
+  cursor: pointer; /* Pointer on hover */
+  font-size: 1em; /* Font size for button */
 }
 
 input[type="submit"]:hover {
-  background-color: #357abd;
+  background-color: #ff1493; /* Darker pink on hover */
+  transition: background-color 0.3s; /* Smooth transition */
+}
+
+textarea {
+  resize: vertical; /* Allow vertical resizing */
 }

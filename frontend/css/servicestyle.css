@@ -1,161 +1,413 @@
 @import url('../css/variables.css');
 
 * {
-  margin: 0px;
-  padding: 0px;
-  box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f9f9f9;
+    color: #333;
 }
 
 h1 {
-  font-family: var(--font-family-p);
-  font-weight: bold;
+    font-family: var(--font-family-p);
+    font-weight: bold;
+    color: #ff69b4; /* Pink color for main headings */
 }
 
 p {
-  font-family: var(--font-family-p);
+    font-family: var(--font-family-p);
 }
 
 .service-hero {
-  padding: 100px 12px;
-  text-align: center;
-  color: var(--text-dark);
-  background: linear-gradient(to bottom right, #fffafc, #fce4ec);
+    padding: 100px 12px;
+    text-align: center;
+    color: #333;
+    background: linear-gradient(to bottom right, #fffafc, #fce4ec);
 }
 
 .service-header {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  gap: 12px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
 }
 
 .service-header h1 {
-  font-variant: small-caps;
-  font-family: 2em;
+    font-variant: small-caps;
+    font-size: 2.5em;
 }
 
 .service-hero a {
-  text-decoration: none;
-  display: inline-block;
-  padding: 10px 20px;
-  text-decoration: none;
-  font-weight: bold;
-  border-radius: 30px;
-  margin-right: 15px;
-  transition: all 0.3s ease;
-  background-color: var(--primary-color);
-  color: white;
-  margin-top: 24px;
+    text-decoration: none;
+    display: inline-block;
+    padding: 10px 20px;
+    font-weight: bold;
+    border-radius: 30px;
+    margin-top: 24px;
+    background-color: #ff69b4; /* Pink button */
+    color: white;
+    transition: all 0.3s ease;
 }
+
 .serviceimage {
- width: 100%;
-  height:350px;
-  padding: 10px;
-  object-fit: contain;
-  background-color: #fafafa;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  object-position: center;
+    width: 100%;
+    height: 350px;
+    padding: 10px;
+    object-fit: contain;
+    background-color: #fafafa;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 10px; /* Rounded corners for images */
 }
+
 .serviceimage img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-}
-.service-card h2 {
-  font-size: 24px;
-  margin-bottom: 10px;
-  font-family: var(--font-family-h);
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 10px; /* Rounded corners for images */
 }
 
-.service-card p {
-  font-size: 16px;
-  margin-bottom: 10px;
-  font-family: var(--font-family-p);
+.section1 {
+    padding: 20px;
+    text-align: center;
 }
 
-.service-card ul {
-  padding-left: 20px;
-  margin-bottom: 10px;
+.section2 {
+    padding: 20px;
 }
 
-.service-card ul li {
-  margin-bottom: 5px;
+.offer-card {
+    display: flex;
+    align-items: center;
+    background-color: #fff; /* White background for cards */
+    border-radius: 10px; /* Rounded corners */
+    padding: 15px;
+    margin: 10px 0;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+    transition: transform 0.3s; /* Animation effect */
 }
 
-.cta-btn {
-  background-color:var(--primary-color);
-  color: #fff;
-  padding: 10px 20px;
-  border: none;
-  border-radius: 12px;
-  cursor: pointer;
-  font-weight: bold;
-  transition: background-color 0.3s ease;
-  align-self: self-start;
+.offer-card:hover {
+    transform: scale(1.05); /* Scale effect on hover */
 }
 
-.cta-btn:hover {
-  background-color: #e85c4f;
-}
-.service-content {
-  display: flex;
-  flex-direction: column;
-  gap: 24px;
+.offer-icon {
+    font-size: 2em; /* Large icon size */
+    margin-right: 15px; /* Space between icon and text */
 }
 
-@media (min-width:800px) {
-  .service-header h1 {
-    font-size: 2.2em;
-  }
-  .serviceimage {
-    width: 50%;
-  }
+.offer-content h3 {
+    margin: 0; /* Remove default margin */
+    color: #ff69b4; /* Pink color for service titles */
 }
 
-
-
-.allservice {
-  display: flex;
-  flex-direction: column;
-  gap: 20px;
-  padding: 50px 20px;
+footer {
+    background-color: #ff69b4; /* Pink footer background */
+    color: white;
+    text-align: center;
+    padding: 15px 0;
 }
 
-.service-card {
-  display: flex;
-  flex-direction: column;
-  gap: 20px;
-  padding: 50px 20px;
+button.home, .start {
+    background-color: #ff69b4; /* Pink button */
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 12px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+}
 
+button.home:hover, .start:hover {
+    background-color: #e85c4f; /* Darker pink on hover */
 }
 
 @media (min-width: 800px) {
- 
-  .service-card {
-   flex-direction: row;
-   align-items: center;
-    justify-content: space-between;
-  }
+    .service-header h1 {
+        font-size: 3em; /* Larger font size for bigger screens */
+    }
+
+    .serviceimage {
+        width: 50%; /* Adjust image width on larger screens */
+    }
+
+    .section1, .section2 {
+        text-align: left; /* Align text to the left on larger screens */
+    }
+}
+@import url('../css/variables.css');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f9f9f9; /* Light cream background */
+    color: #333; /* Dark text */
+}
+
+/* Hero Section */
+.service-hero {
+    padding: 80px 12px;
+    text-align: center;
+    color: #333;
+    background: linear-gradient(to bottom right, #fffafc, #fce4ec); /* Light pink gradient */
+}
+
+.service-header h1 {
+    font-size: 2.5em;
+    color: #ff69b4; /* Pink color for headings */
+}
+
+.service-header p {
+    font-size: 1.1em;
+    margin-top: 10px;
+}
+
+.service-hero a {
+    text-decoration: none;
+    display: inline-block;
+    margin-top: 20px;
+    padding: 10px 20px;
+    background-color: #ff69b4; /* Pink button */
+    color: white;
+    border-radius: 30px;
+    transition: background-color 0.3s ease;
+}
+
+.service-hero a:hover {
+    background-color: #e85c4f; /* Darker pink on hover */
+}
+
+/* All Services Section */
+.allservice {
+    padding: 50px 20px;
+}
+
+.header {
+    text-align: center;
+    margin-bottom: 40px;
 }
 
 .header h1 {
-  font-size: 32px;
-  color: #333;
-  text-align: center;
+    font-size: 2.2em;
+    color: #ff69b4; /* Pink color for service header */
 }
 
 .header h3 {
-  font-size: 18px;
-  color: #777;
-  text-align: center;
-  margin-bottom: 30px;
+    font-size: 1.5em;
+    color: #777; /* Light gray for subheading */
 }
 
-.allservice .service-card:nth-child(even) {
-  background-color: #fff;
+/* Service Card Styles */
+.service-card {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    padding: 30px;
+    background-color: #fff; /* White background for cards */
+    border-radius: 10px; /* Rounded corners */
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+    transition: transform 0.3s; /* Animation effect */
 }
 
-.allservice .service-card:nth-child(odd) {
-  background-color: #f7f5dd;
+.service-card:hover {
+    transform: scale(1.02); /* Slight scale effect on hover */
+}
+
+.service-content {
+    flex: 1; /* Allow content to grow */
+}
+
+.serviceimage {
+    width: 100%;
+    height: auto; /* Responsive image height */
+    border-radius: 10px; /* Rounded corners for images */
+    overflow: hidden; /* Ensure no overflow */
+}
+
+.serviceimage img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Cover image */
+}
+
+/* Button Styles */
+.cta-btn {
+    background-color: #ff69b4; /* Pink button */
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 12px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+}
+
+.cta-btn:hover {
+    background-color: #e85c4f; /* Darker pink on hover */
+}
+
+/* Responsive Design */
+@media (min-width: 800px) {
+    .service-card {
+        flex-direction: row; /* Horizontal layout on larger screens */
+        align-items: center; /* Center items vertically */
+    }
+
+    .service-content {
+        flex: 2; /* Content takes more space */
+    }
+
+    .serviceimage {
+        flex: 1; /* Image takes less space */
+    }
+}
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    background-color: #f9f9f9; /* Light cream background */
+    color: #333; /* Dark text */
+}
+
+/* Section 0 - Hero */
+.section0 {
+    background-color: #ff69b4; /* Pink background */
+    padding: 50px 20px;
+    text-align: center;
+}
+
+.section0 h1 {
+    color: white; /* White text for headings */
+    font-size: 2.5em;
+    margin-bottom: 20px;
+}
+
+.start a {
+    background-color: white; /* White button */
+    color: #ff69b4; /* Pink text */
+    padding: 10px 20px;
+    border: none;
+    border-radius: 30px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+}
+
+.start a:hover {
+    background-color: #ff1493; /* Darker pink on hover */
+}
+
+/* Main Content */
+main {
+    padding: 20px;
+}
+
+/* Section 1 */
+.section1 {
+    text-align: center;
+    padding: 40px 20px;
+}
+
+.section1 h2 {
+    font-size: 2em;
+    color: #ff69b4; /* Pink color for subheading */
+    margin-bottom: 20px;
+}
+
+.section1 img {
+    width: 100%;
+    max-width: 600px; /* Limit image width */
+    border-radius: 10px; /* Rounded corners for images */
+    margin: 20px 0;
+}
+
+.section1 p {
+    font-size: 1.1em;
+    margin-bottom: 20px;
+}
+
+/* Button for Back to Home */
+.home {
+    background-color: #ff69b4; /* Pink button */
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 12px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+}
+
+.home a {
+    color: white; /* White text for link */
+    text-decoration: none;
+}
+
+.home:hover {
+    background-color: #e85c4f; /* Darker pink on hover */
+}
+
+/* Section 2 - Service Highlights */
+.section2 {
+    padding: 40px 20px;
+}
+
+.section2 h2 {
+    font-size: 2em;
+    color: #ff69b4; /* Pink color for section title */
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.offer-card {
+    display: flex;
+    align-items: center;
+    background-color: #fff; /* White background for cards */
+    border-radius: 10px;
+    padding: 20px;
+    margin: 15px 0;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+    transition: transform 0.3s; /* Animation effect */
+}
+
+.offer-card:hover {
+    transform: scale(1.02); /* Slight scale effect on hover */
+}
+
+.offer-icon {
+    font-size: 2.5em; /* Large icon size */
+    margin-right: 15px; /* Space between icon and text */
+}
+
+.offer-content h3 {
+    margin: 0; /* Remove default margin */
+    color: #ff69b4; /* Pink color for service titles */
+}
+
+.offer-content p {
+    margin-top: 5px; /* Space between title and text */
+}
+
+/* Footer */
+footer {
+    background-color: #ff69b4; /* Pink footer background */
+    color: white;
+    text-align: center;
+    padding: 15px 0;
 }
