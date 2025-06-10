@@ -1,117 +1,84 @@
-       @import url('variables.css');
-       body {
-        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-        margin: 0;
-        padding: 0;
-        animation: fadeIn 1.5s ease-in-out;
-        box-sizing: border-box;
-      }
-     .contact-hero{
-        padding: 50px 0;
-        text-align: center;
-        color: var(--text-dark);
-        background: linear-gradient(to bottom right, #fffafc, #fce4ec);
-      }
-      .contact-hero h1{
-        font-size: 30px;
-      }
-      .contact-info{
-        width: 60%;
-        margin: auto;
-        display: flex;
-        margin-top:50px;
-        justify-content: space-around;
-        align-items: center;
-      }
-      .contact-info div{
-        text-align: center;
-        padding: 30px;
-        border-radius:20px ;
-        background-color: #f9f9f9;
-        transition: all 0.3s ease-in-out;
-        box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.1);
-      }
-      .fa-phone,
-      .fa-envelope,
-      .fa-location-dot{
-        font-size: 30px;
-        padding: 7px;
-        border-radius: 5px;
-        color: var(--primary-color);
-      }
-      .contact-content{
-        font-size: 18px;
-        font-weight: 600;
-        margin: 20px;
-      }
-      .contact-info div p{
-        font-size: 14px;
-      }
-      .contact-info div:hover{
-        background-color: #333;
-        color: #fff;
-        box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.1);
-        i,p{
-          color: #fff;
-        }
-      }
-      .get-in-touch{
-        margin: auto;
-        width: 80%;
-        margin-top:100px ;
-      }
-      .get-in-touch h2,p{
-        text-align: center;
-        color: #484848;
-      }
-      .get-in-touch h2{
-        font-size: 35px;
-      }
-      .contact-form form{
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-      }
-      input,textarea{
-        width: 800px;
-        padding: 15px;
-        border-radius:10px;
-        border: none;
-        border: 1px solid #ccc;
-      }
-      textarea{
-        height: 200px;
-      }
-      .contact-form button{
-        background-color: var(--primary-light);
-        color: #fff;
-        font-weight: 600;
-        padding: 10px 20px;
-        border: none;
-        border-radius: 5px;
-        cursor: pointer;
-        transition: all 0.3s ease-in-out;
-      }
-      .contact-form button:hover{
-        background-color: var(--primary-color);
-      }
-      .social-icons{
-        display: flex;
-      }
-      .social-icons i{
-        font-size: 20px;
-        margin: 20px 15px;
-        color: #333;
-      }
-      .social-icons i:hover{
-        color: var(--primary-color);
-        cursor: pointer;
-      }
-      .address-map{
-        margin: auto;
-        width: 70%;
-      }
+@import url('variables.css');
 
-        
-      
+* {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+}
+
+h1 {
+  font-family: var(--font-family-p);
+  font-weight: bold;
+}
+
+p {
+  font-family: var(--font-family-p);
+}
+
+.contact-hero {
+  padding: 100px 12px;
+  text-align: center;
+  color: var(--text-dark);
+  background: linear-gradient(to bottom right, #fffafc, #fce4ec);
+}
+
+.contact-header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+}
+
+.contact-header h1 {
+  font-variant: small-caps;
+  font-family: 2em;
+}
+
+.get-in-touch,
+#get-in-touch {
+  background-color: white !important;
+}
+
+.contact-info {
+  margin: auto;
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: 50px;
+  justify-content: space-around;
+  align-items: center;
+  gap: 20px;
+
+}
+
+.contact-info div {
+  text-align: center;
+  padding: 30px;
+  border-radius: 20px;
+  background-color: #f9f9f9;
+  transition: all 0.3s ease-in-out;
+  box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.1);
+  width: 250px;
+  height: 150px;
+}
+
+.fa-phone,
+.fa-envelope,
+.fa-location-dot {
+  font-size: 30px;
+  padding: 7px;
+  border-radius: 5px;
+  color: var(--primary-color);
+}
+
+.contact-wrapper {
+  max-width: 700px !important;
+}
+
+.address-map {
+  margin: auto;
+  width: 100%;
+  max-width: 800px;
+  height: 400px;
+
+}

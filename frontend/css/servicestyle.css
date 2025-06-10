@@ -1,95 +1,413 @@
-body {
-  font-family: 'Arial', sans-serif;
-  background-color: #fff;
-  color: #333;
-  line-height: 1.6;
-  margin: 0;
-  padding: 0;
+@import url('../css/variables.css');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
-.services {
-  padding: 40px 20px;
-  background-color: #f9f9f9;
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f9f9f9;
+    color: #333;
+}
+
+h1 {
+    font-family: var(--font-family-p);
+    font-weight: bold;
+    color: #ff69b4; /* Pink color for main headings */
+}
+
+p {
+    font-family: var(--font-family-p);
+}
+
+.service-hero {
+    padding: 100px 12px;
+    text-align: center;
+    color: #333;
+    background: linear-gradient(to bottom right, #fffafc, #fce4ec);
+}
+
+.service-header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+}
+
+.service-header h1 {
+    font-variant: small-caps;
+    font-size: 2.5em;
+}
+
+.service-hero a {
+    text-decoration: none;
+    display: inline-block;
+    padding: 10px 20px;
+    font-weight: bold;
+    border-radius: 30px;
+    margin-top: 24px;
+    background-color: #ff69b4; /* Pink button */
+    color: white;
+    transition: all 0.3s ease;
+}
+
+.serviceimage {
+    width: 100%;
+    height: 350px;
+    padding: 10px;
+    object-fit: contain;
+    background-color: #fafafa;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 10px; /* Rounded corners for images */
+}
+
+.serviceimage img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 10px; /* Rounded corners for images */
+}
+
+.section1 {
+    padding: 20px;
+    text-align: center;
+}
+
+.section2 {
+    padding: 20px;
+}
+
+.offer-card {
+    display: flex;
+    align-items: center;
+    background-color: #fff; /* White background for cards */
+    border-radius: 10px; /* Rounded corners */
+    padding: 15px;
+    margin: 10px 0;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+    transition: transform 0.3s; /* Animation effect */
+}
+
+.offer-card:hover {
+    transform: scale(1.05); /* Scale effect on hover */
+}
+
+.offer-icon {
+    font-size: 2em; /* Large icon size */
+    margin-right: 15px; /* Space between icon and text */
+}
+
+.offer-content h3 {
+    margin: 0; /* Remove default margin */
+    color: #ff69b4; /* Pink color for service titles */
+}
+
+footer {
+    background-color: #ff69b4; /* Pink footer background */
+    color: white;
+    text-align: center;
+    padding: 15px 0;
+}
+
+button.home, .start {
+    background-color: #ff69b4; /* Pink button */
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 12px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+}
+
+button.home:hover, .start:hover {
+    background-color: #e85c4f; /* Darker pink on hover */
+}
+
+@media (min-width: 800px) {
+    .service-header h1 {
+        font-size: 3em; /* Larger font size for bigger screens */
+    }
+
+    .serviceimage {
+        width: 50%; /* Adjust image width on larger screens */
+    }
+
+    .section1, .section2 {
+        text-align: left; /* Align text to the left on larger screens */
+    }
+}
+@import url('../css/variables.css');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f9f9f9; /* Light cream background */
+    color: #333; /* Dark text */
+}
+
+/* Hero Section */
+.service-hero {
+    padding: 80px 12px;
+    text-align: center;
+    color: #333;
+    background: linear-gradient(to bottom right, #fffafc, #fce4ec); /* Light pink gradient */
+}
+
+.service-header h1 {
+    font-size: 2.5em;
+    color: #ff69b4; /* Pink color for headings */
+}
+
+.service-header p {
+    font-size: 1.1em;
+    margin-top: 10px;
+}
+
+.service-hero a {
+    text-decoration: none;
+    display: inline-block;
+    margin-top: 20px;
+    padding: 10px 20px;
+    background-color: #ff69b4; /* Pink button */
+    color: white;
+    border-radius: 30px;
+    transition: background-color 0.3s ease;
+}
+
+.service-hero a:hover {
+    background-color: #e85c4f; /* Darker pink on hover */
+}
+
+/* All Services Section */
+.allservice {
+    padding: 50px 20px;
+}
+
+.header {
+    text-align: center;
+    margin-bottom: 40px;
 }
 
 .header h1 {
-  font-size: 32px;
-  color: #333;
-  text-align: center;
+    font-size: 2.2em;
+    color: #ff69b4; /* Pink color for service header */
 }
 
 .header h3 {
-  font-size: 18px;
-  color: #777;
-  text-align: center;
-  margin-bottom: 30px;
+    font-size: 1.5em;
+    color: #777; /* Light gray for subheading */
 }
 
+/* Service Card Styles */
 .service-card {
-  background-color: #fff;
-  border: 1px solid #ddd;
-  border-left: 5px solid #ff6f61;
-  border-radius: 8px;
-  padding: 20px;
-  margin: 20px auto;
-  max-width: 700px;
-  box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    padding: 30px;
+    background-color: #fff; /* White background for cards */
+    border-radius: 10px; /* Rounded corners */
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+    transition: transform 0.3s; /* Animation effect */
 }
 
-.service-card h2 {
-  font-size: 24px;
-  margin-bottom: 10px;
-  color: #ff6f61;
+.service-card:hover {
+    transform: scale(1.02); /* Slight scale effect on hover */
 }
 
-.service-card p {
-  font-size: 16px;
-  margin-bottom: 10px;
+.service-content {
+    flex: 1; /* Allow content to grow */
 }
 
-.service-card ul {
-  padding-left: 20px;
-  margin-bottom: 10px;
+.serviceimage {
+    width: 100%;
+    height: auto; /* Responsive image height */
+    border-radius: 10px; /* Rounded corners for images */
+    overflow: hidden; /* Ensure no overflow */
 }
 
-.service-card ul li {
-  margin-bottom: 5px;
+.serviceimage img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Cover image */
 }
 
+/* Button Styles */
 .cta-btn {
-  background-color: #ff6f61;
-  color: #fff;
-  padding: 10px 20px;
-  border: none;
-  border-radius: 25px;
-  cursor: pointer;
-  font-weight: bold;
-  transition: background-color 0.3s ease;
+    background-color: #ff69b4; /* Pink button */
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 12px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
 }
 
 .cta-btn:hover {
-  background-color: #e85c4f;
+    background-color: #e85c4f; /* Darker pink on hover */
 }
 
-.strategy {
-  padding: 40px 20px;
-  background-color: #fff0e6;
-  text-align: center;
+/* Responsive Design */
+@media (min-width: 800px) {
+    .service-card {
+        flex-direction: row; /* Horizontal layout on larger screens */
+        align-items: center; /* Center items vertically */
+    }
+
+    .service-content {
+        flex: 2; /* Content takes more space */
+    }
+
+    .serviceimage {
+        flex: 1; /* Image takes less space */
+    }
+}
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
-.strategy h2 {
-  color: #333;
-  font-size: 28px;
-  margin-bottom: 10px;
+body {
+    font-family: 'Roboto', sans-serif;
+    background-color: #f9f9f9; /* Light cream background */
+    color: #333; /* Dark text */
 }
 
-.strategy ul {
-  max-width: 700px;
-  margin: 0 auto;
-  padding-left: 20px;
-  text-align: left;
+/* Section 0 - Hero */
+.section0 {
+    background-color: #ff69b4; /* Pink background */
+    padding: 50px 20px;
+    text-align: center;
 }
 
-.strategy li {
-  margin-bottom: 10px;
+.section0 h1 {
+    color: white; /* White text for headings */
+    font-size: 2.5em;
+    margin-bottom: 20px;
+}
+
+.start a {
+    background-color: white; /* White button */
+    color: #ff69b4; /* Pink text */
+    padding: 10px 20px;
+    border: none;
+    border-radius: 30px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+}
+
+.start a:hover {
+    background-color: #ff1493; /* Darker pink on hover */
+}
+
+/* Main Content */
+main {
+    padding: 20px;
+}
+
+/* Section 1 */
+.section1 {
+    text-align: center;
+    padding: 40px 20px;
+}
+
+.section1 h2 {
+    font-size: 2em;
+    color: #ff69b4; /* Pink color for subheading */
+    margin-bottom: 20px;
+}
+
+.section1 img {
+    width: 100%;
+    max-width: 600px; /* Limit image width */
+    border-radius: 10px; /* Rounded corners for images */
+    margin: 20px 0;
+}
+
+.section1 p {
+    font-size: 1.1em;
+    margin-bottom: 20px;
+}
+
+/* Button for Back to Home */
+.home {
+    background-color: #ff69b4; /* Pink button */
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 12px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+}
+
+.home a {
+    color: white; /* White text for link */
+    text-decoration: none;
+}
+
+.home:hover {
+    background-color: #e85c4f; /* Darker pink on hover */
+}
+
+/* Section 2 - Service Highlights */
+.section2 {
+    padding: 40px 20px;
+}
+
+.section2 h2 {
+    font-size: 2em;
+    color: #ff69b4; /* Pink color for section title */
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.offer-card {
+    display: flex;
+    align-items: center;
+    background-color: #fff; /* White background for cards */
+    border-radius: 10px;
+    padding: 20px;
+    margin: 15px 0;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+    transition: transform 0.3s; /* Animation effect */
+}
+
+.offer-card:hover {
+    transform: scale(1.02); /* Slight scale effect on hover */
+}
+
+.offer-icon {
+    font-size: 2.5em; /* Large icon size */
+    margin-right: 15px; /* Space between icon and text */
+}
+
+.offer-content h3 {
+    margin: 0; /* Remove default margin */
+    color: #ff69b4; /* Pink color for service titles */
+}
+
+.offer-content p {
+    margin-top: 5px; /* Space between title and text */
+}
+
+/* Footer */
+footer {
+    background-color: #ff69b4; /* Pink footer background */
+    color: white;
+    text-align: center;
+    padding: 15px 0;
 }

@@ -1,101 +1,90 @@
-@import url('variables.css');
-       body {
-        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-        margin: 0;
-        padding: 0;
-        animation: fadeIn 1.5s ease-in-out;
-        box-sizing: border-box;
-      }
-    .about-hero{
-        padding: 50px 0;
-        text-align: center;
-        color: var(--text-dark);
-        background: linear-gradient(to bottom right, #fffafc, #fce4ec);
-      }
-      .about-hero h1{
-        font-size: 30px;
-      }
-      .about-content{
-        display: flex;
-        justify-content: space-around;
-        align-items: center;
-        margin: auto;
-        width: 85%;
-        margin-top: 50px;
-        border-radius: 10px;
-      }
-      .about-img img{
-        margin-right: 50px;
-        border-radius: 30px;
-      }
-      .about-text{
-        width: 500px;
-      }
-      .about-text h1{
-        font-size: 40px;
-        margin-top: 0;
-      }
-      button{
-        background-color: var(--primary-light);
-        font-weight: 600;
-        padding: 10px 20px;
-        border: none;
-        border-radius: 5px;
-        cursor: pointer;
-        transition: all 0.3s ease-in-out;
-        a{
-          text-decoration: none;
-          color: #fff;
-        }
-      }
-      button:hover{
-        background-color: var(--primary-color);
-      }
-.about-experience{
-  background-color: #f7fbe4;
-  padding: 50px;
-  margin: 50px 0;
+@import url('../css/variables.css');
+
+* {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
 }
-.experience-container{
-display: flex;
-justify-content: space-around;
-align-items: center;
-margin: auto;
-width: 85%;
-margin-top: 50px;
-border-radius: 10px;
+
+h1 {
+  font-family: var(--font-family-p);
+  font-weight: bold;
 }
-.exp-text{
-  width: 500px;
+
+p {
+  font-family: var(--font-family-p);
 }
-.exp-text h1{
-  font-size: 40px;
-}
-.exp-blocks{
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 30px;
-}
-.exp-blocks div{
-  width: 150px;
-  padding: 15px;
+
+.about-hero {
+  padding: 100px 12px;
   text-align: center;
-  border-radius: 20px;
-  transition: all 0.3s ease-in-out;
+  color: var(--text-dark);
+  background: linear-gradient(to bottom right, #fffafc, #fce4ec);
+
 }
-.exp-blocks div:hover{
-  background-color: #fdeeca;
-}
-.exp-blocks div h1{
-  font-size: 35px;
-}
-.about-choose{
-  background:linear-gradient(to bottom,#fff, #f7fbe4,#fff,#f7fbe4,#fff) ;
-  width: 800px;
-  margin: auto;
+
+.about-header {
   display: flex;
-  justify-content: center;
+  flex-direction: column;
   align-items: center;
-  text-align: center;
-  padding: 90px;
+  justify-content: center;
+  gap: 12px;
 }
+.about-header h1 {
+  font-variant: small-caps;
+  font-family: 2em;
+}
+
+.about-hero a {
+  text-decoration: none;
+  display: inline-block;
+  padding: 10px 20px;
+  text-decoration: none;
+  font-weight: bold;
+  border-radius: 30px;
+  margin-right: 15px;
+  transition: all 0.3s ease;
+  background-color: var(--primary-color);
+  color: white;
+  margin-top: 24px;
+}
+@media (min-width:800px) {
+  .about-header h1 { 
+    font-size: 2.2em;
+  }
+}
+
+.about-content {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  padding:35px 12px;
+  padding: 40px 12px;
+}
+
+.about-img {
+  width: 100%;
+  max-width: 500px;
+
+}
+ .about-img img {
+  width: 100%;
+  border-radius: 8px;
+ }
+@media (min-width:800px) { 
+  .about-content{
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+  }
+  .about-img {
+    width: 50%;
+  }
+  .about-text {
+    width: 50%;
+  }
+}
+.contact {
+  background-color: #F7F5DD;
+}
+

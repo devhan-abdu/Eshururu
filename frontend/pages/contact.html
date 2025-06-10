@@ -1,68 +1,77 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <title>Contact Us</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <!-- <link rel="stylesheet" href="../css/style.css"> -->
-  <link rel="stylesheet" href="../css/contact.css"> 
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="../css/contact.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
   <link rel="icon" type="image/png" href="../images/favicon.png">
-  <link rel="stylesheet" href="variable.css">
+  <link rel="stylesheet" href="../css/components/footer.css">
+  <link rel="stylesheet" href="../css/components/header.css">
+  <link rel="stylesheet" href="../css/style.css">
 </head>
+
 <body>
- 
+
   <!-- Header -->
   <custom-header></custom-header>
-  <!-- Contact Section -->
-   <section class="contact-hero">
-    <div class="container">
-      <h1>Contact Us</h1>
-      <p>Home > Contact</p>
+  <section class="contact-hero">
+    <div class="contact-header">
+      <h1>We’d Love to Hear From You — Let’s Connect</h1>
+      <p>Whether you have questions or you're ready to join the Eshururu family,<br /> we're here to help every step of
+        the way.</p>
     </div>
-   </section>
-   <section class="contact-info">
-     <div class="phone">
-       <i class="fa-solid fa-phone"></i>
-       <h2>Phone</h2>
-       <p class="contact-content" style="font-size: 16px;">+251 912 345 678</p>
-     </div>
-     <div class="email">
-       <i class="fa-solid fa-envelope"></i>
-       <h2>Email Address</h2>
-       <p class="contact-content" style="font-size: 16px;">support@cuddlecare.com</p>
-     </div>
-     <div class="address">
-       <i class="fa-solid fa-location-dot"></i>
-       <h2>Location</h2>
-       <p class="contact-content" style="font-size: 16px;">Bole, Addis Ababa, Ethiopia</p>
-     </div>
-   </section>
+  </section>
+  <section class="contact-info">
+    <div class="phone">
+      <i class="fa-solid fa-phone"></i>
+      <h2>Phone</h2>
+      <p class="contact-content" style="font-size: 16px;">+251 912 345 678</p>
+    </div>
+    <div class="email">
+      <i class="fa-solid fa-envelope"></i>
+      <h2>Email Address</h2>
+      <p class="contact-content" style="font-size: 16px;">support@cuddlecare.com</p>
+    </div>
+    <div class="address">
+      <i class="fa-solid fa-location-dot"></i>
+      <h2>Location</h2>
+      <p class="contact-content" style="font-size: 16px;">Bole, Addis Ababa, Ethiopia</p>
+    </div>
+  </section>
   <section class="get-in-touch" id="get-in-touch">
-            <h2>Get in Touch</h2>
-            <p>Lorem ipsum. Quibusdam distinctio fuga suscipit in inventore vitae , officia quis earum praesentium enim!</p>
-            <div class="contact-wrapper">
-            
-                <!-- Contact Form -->
-                <div class="contact-form">
-                    <form action="send-email.php" method="post">
-                    <input type="text" id="name" name="name" placeholder="Name" required><br>
-                    <input type="email" id="email" name="email" placeholder="Email"  required><br>
-                    <input type="text" id="subject" name="subject" placeholder="Subject" required><br>
-                    <textarea id="message" name="message" placeholder="Message" required></textarea><br>
-                    <button type="submit">Send Message</button>
-                    <div class="social-icons">
-                      <i class="fa-brands fa-square-x-twitter"></i>
-                      <i class="fa-brands fa-linkedin"></i>
-                      <i class="fa-brands fa-square-instagram"></i>
-                    </div>
-                    </form>
-                </div>
-                <!-- Contact Info -->
-                <div class="address-map">
-                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d19790.676871941683!2d38.8060286540978!3d8.979388022267532!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x164b9b3b48de137d%3A0xad4b51f56eb76cc9!2sBole!5e0!3m2!1sen!2set!4v1747966755356!5m2!1sen!2set" width="850" height="300" style="border:0; border-radius: 20px;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-        </section><br>
+    <div class="header">
+      <h1>Get In Touch</h1>
+      <h3>We are here to help! Reach out.</h3>
+    </div>
+    <div class="contact-wrapper">
+      <div class="contact-form">
+        <form action="send-email.php" method="post">
+          <input type="text" id="name" name="name" placeholder="Your name" required>
+          <input type="tel" id="phone" name="phone" placeholder="Your phone number" required>
+          <br>
+          <input type="email" id="email" name="email" placeholder="Your email" required><br>
+          <textarea id="message" name="message" cols="30" rows="5" placeholder="Write your message..."
+            required></textarea><br>
+          <div class="button-wrapper">
+            <button type="submit">Send Message</button>
+          </div>
+        </form>
+      </div>
+  </section>
+  <!-- Contact Info -->
+  <section class="address-map">
+    <iframe
+      src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d19790.676871941683!2d38.8060286540978!3d8.979388022267532!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x164b9b3b48de137d%3A0xad4b51f56eb76cc9!2sBole!5e0!3m2!1sen!2set!4v1747966755356!5m2!1sen!2set"
+      width="850" height="300" style="border:0; border-radius: 20px;" allowfullscreen="" loading="lazy"
+      referrerpolicy="no-referrer-when-downgrade"></iframe>
+    </section><br>
     <custom-footer></custom-footer>
-  <script src="app.js"></script>
+    <script src="app.js"></script>
+    <script src="../js/layout.js" defer></script>
+
 </body>
+
 </html>
